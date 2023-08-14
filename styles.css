@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: none;
+}
+
+body {
+  background-color: hsl(234, 29%, 20%);
+  font-family: roboto;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 2rem;
+  width: 42rem;
+  height: 30rem;
+  margin-bottom: 1rem;
+}
+
+.img-container {
+  padding: 1rem;
+  height: 30rem;
+}
+
+.main-img {
+  height: 28rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3rem 1rem 3rem 2.4rem;
+  gap: 1rem;
+
+}
+
+.hero__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: hsl(234, 29%, 20%);
+}
+
+.hero__description {
+  font-size: 0.8rem;
+  color: hsl(234, 29%, 20%);
+}
+
+.hero__advantages {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr; 
+  row-gap: 0.6rem;
+}
+
+.hero__advantages-element {
+  display: grid; 
+  grid-template-columns: 1rem 1fr;
+  column-gap: 0.6rem;
+}
+
+.hero__logo {
+  width: 100%;
+}
+
+.hero__advantages-paragraph {
+  font-size: 0.8rem;
+  color: hsl(234, 29%, 20%);
+}
+
+.hero__input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hero__messages {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__email {
+  font-weight: bold;
+  color: hsl(234, 29%, 20%);
+}
+
+.errorMessage {
+  color: red;
+}
+
+.input-error {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-color: red;
+}
+
+.hero__input-bar {
+  width: 100%;
+  padding: 0.8rem;
+  outline: none;
+  border-style: solid;
+  border-color: hsl(231, 7%, 60%);
+  border-width: 0.1rem;
+  border-radius: 0.4rem;
+}
+
+.hero__subscribe-btn,
+.response__btn {
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  font-weight: bold;
+  border: none;
+  padding: 1rem;
+  font-size: 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s, background-color 0.2;
+}
+
+.hero__subscribe-btn:hover,
+.response__btn:hover {
+  background: linear-gradient(90deg, hsl(357, 100%, 67%), hsl(4, 100%, 67%));
+}
+
+.response {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 26rem;
+  height: 26rem;
+  padding: 2rem 3.6rem;
+  border-radius: 1.4rem;
+}
+
+.response__logo {
+  width: 3rem;
+}
+
+.response__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: hsl(234, 29%, 20%);
+  line-height: 2.4rem;
+}
+
+.response__description {
+  font-size: 0.8rem;
+}
+
+.attribution { font-size: 11px; text-align: center; color: hsl(0, 0%, 100%); }
+.attribution a { color: hsl(227, 42%, 64%); }
+
+@media screen and (max-width: 750px) {
+  .container {
+    height: 100%;
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    margin: auto;
+  }
+
+  section {
+    flex-direction: column;
+    width: 375px;
+    height: 100%;
+    align-items: center;
+    padding: 0;
+  }
+
+  .img-container {
+    padding: 0;
+    height: fit-content;
+  }
+
+  .main-img {
+    content: url(assets/images/illustration-sign-up-mobile.svg);
+    width: 375px;
+    height: 284px;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .response {
+    width: 375px;
+    height: 100%;
+  }
+}
