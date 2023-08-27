@@ -10,7 +10,8 @@ body {
   font-family: roboto;
 }
 
-.container {
+.container,
+.response__container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -130,6 +131,10 @@ section {
 .hero__subscribe-btn:hover,
 .response__btn:hover {
   background: linear-gradient(90deg, hsl(357, 100%, 67%), hsl(4, 100%, 67%));
+}
+
+.invisible__container {
+  display: none;
 }
 
 .response {
